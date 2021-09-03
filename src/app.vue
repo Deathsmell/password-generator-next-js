@@ -1,3 +1,5 @@
+<style lang="scss" src="./main.scss"/>
+
 <template>
   <Calendar/>
 </template>

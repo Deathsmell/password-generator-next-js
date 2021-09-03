@@ -8,5 +8,8 @@ module.exports = {
         localesToKeep: ['es-us', 'ru'],
       }),
     ],
+    output: {
+      libraryExport: 'default',
+    },
   },
 }

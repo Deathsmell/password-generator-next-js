@@ -1,0 +1,18 @@
+$default-height: 20px;
+$hovered-height: $default-height + 5px;
+
+.day-event-container {
+  width: 100%;
+  height: $default-height;
+  line-height: $default-height;
+  text-align: center;
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 200ms;
+
+  &:hover {
+    height: $hovered-height;
+    line-height: $hovered-height;
+  }
+}

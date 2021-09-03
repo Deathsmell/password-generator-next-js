@@ -4,17 +4,22 @@
   <div :class="dayContainerClasses">
     <div :class="$style['header']">
       <span :class="$style['day-number']">
-              {{ day }}
+              {{ day.getDayNumber() }}
       </span>
       <div :class="$style['add-button']">
         +
       </div>
     </div>
     <div :class="$style['body']">
-      <span v-if="!events.length"
+      <span v-if="!day.hasEvents()"
             :class="$style['no-events-text']">
         {{ 'no events' }}
       </span>
+      <DayEventComponent v-else-if="day.getEvents()"
+                         :class="$style['day-event']"
+                         v-for="dayEvent in day.getEvents()"
+                         :key="dayEvent.name"
+                         :dayEvent="dayEvent"/>
     </div>
   </div>
 </template>

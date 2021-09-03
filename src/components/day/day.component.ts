@@ -1,10 +1,15 @@
 import { defineComponent } from 'vue'
+import { DayModel } from '@/model/day.model'
+import DayEventComponent from '../dayEvent/day-event.component.vue'
 
 export default defineComponent({
   name: 'Day',
+  components: {
+    DayEventComponent,
+  },
   props: {
     day: {
-      type: Number,
+      type: DayModel,
       require: true,
     },
   },
@@ -17,11 +22,7 @@ export default defineComponent({
     },
 
     isToday (): boolean {
-      return this.day === this.$moment.date()
-    },
-
-    events () {
-      return []
+      return this.$moment().date() === this.day?.getDayNumber()
     },
   },
 })
