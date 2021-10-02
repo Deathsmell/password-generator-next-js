@@ -13,4 +13,8 @@ export class CommonUtils {
   static exist (value: never): boolean {
     return value !== null && value !== undefined
   }
+
+  static fill<T = null> (size: number, value?: T): T[] {
+    return Array(size).fill(value || null)
+  }
 }
