@@ -1,0 +1,9 @@
+{
+  "supportES6": true,
+  "ensureUniqueParams": false,
+  "withSeparateModelsAndApi": true,
+  "paramNaming": "camelCase",
+  "enumPropertyNaming": "camelCase",
+  "apiPackage": "api",
+  "modelPackage": "models"
+}
